@@ -1,8 +1,9 @@
 const express = require("express");
-const path = require("path");
+// const path = require("path");
 const morgan = require('morgan');
 // const handlebars = require('express-handlebars');
-const http = require('http');
+// const http = require('http');
+const compression = require("compression");
 
 
 const browserObject = require("./browser");
@@ -13,6 +14,7 @@ const port = 3001;
 
 //HTTP logger
 app.use(morgan('combined'));
+app.use(compression()); // Compress all routes
 
 //Template engine
 // app.engine('hbs', handlebars.engine({extname: '.hbs'}));
