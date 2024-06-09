@@ -19,6 +19,8 @@ app.use(morgan('combined'));
 // app.set('view engine', 'hbs');
 // app.set('views', path.join(__dirname, 'resources\\views'));
 
+app.get("/", (req, res) => res.send("Express on Vercel"));
+
 app.get("/tracking", (req, res) => {
   // console.log('PATH:', path.join(__dirname, 'resources\\views'));
   //Start the browser and create a browser instance
